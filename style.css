@@ -564,7 +564,7 @@ input{
     }
 
     .menu-set{
-        display: none;
+        display: block !important;
         z-index: 999;
         position: absolute;
         top: 100px;
@@ -575,10 +575,21 @@ input{
         padding: 5px;
         color: var(--font-clr);
         text-decoration: none;
+        
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-15px);
+        transition: opacity 0.3s ease, transform 0.3 ease, visibility 0.3s;
 
         user-select: none;
         -webkit-user-select: none;
         -webkit-tap-highlight-color: transparent;
+    }
+
+    .menu-set.active{
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: translateY(0) !important;
     }
 
     .m-link{
@@ -611,6 +622,10 @@ input{
         outline: none;
     }
 
+    a:visited{
+        color: var(--font-clr);
+    }
+
     .menu-set.active{
         display: block;
     }
@@ -631,7 +646,7 @@ input{
         height: 150px;
     }
 
-    html, body{
+    body{
         overflow-x: hidden;
         width: 100%;
         margin: 0;
