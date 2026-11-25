@@ -500,12 +500,7 @@ input{
         width: 100%;
     }
 
-    :is(.fast-food, .desserts, .rolls, .drinks, .health-food, .breakfasts){
-        grid-column: auto !important;
-        grid-row: auto !important;
-        height: auto;
-        min-height: 180px;
-    }
+    
 
     .fast-food img, .desserts img, .drinks img, .rolls img, .health-food img, .breakfasts img{
         width: 100%;
@@ -513,6 +508,8 @@ input{
         object-fit: cover;
         object-position: center;
         border-radius: 20px;
+
+        display: none;
     }
 
     .header{
@@ -533,7 +530,7 @@ input{
     }
 
     .header input[type="text"]{
-        width: 170px;
+        width: 180px;
         height: 15px;
         margin: 0;
     }
@@ -646,11 +643,15 @@ input{
         height: 150px;
     }
 
-    body{
+    .contacts{
+        display: none;
+    }
+
+    body, html {
         overflow-x: hidden;
         width: 100%;
         margin: 0;
-        padding: 3;
+        padding: 0;
     }
     
 }
